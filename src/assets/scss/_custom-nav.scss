@@ -1,0 +1,33 @@
+@import './custom.scss';
+
+
+
+.nav-link {
+    text-align: end;
+    font-weight: bold;
+    font-size: 1.2rem;
+    font-family: 'Raleway';
+    color: $primary;
+    padding-right: 100px;
+    display: inline-block;
+    position: relative;
+}
+
+.nav-link::before {
+    transition: 300ms;
+    height: 5px;
+    content: "";
+    position: absolute;
+    background-color: #f2f2f2;
+  }
+
+.nav-link-grow-up::before {
+    height: 0%;
+    width: 80%;
+    bottom: 0px;
+  }
+  
+.nav-link-grow-up:hover::before {
+    height: 5px;
+}
+

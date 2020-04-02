@@ -1,28 +1,50 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <header class="header">
+        <NavNonAuth v-if="!currentUser"></NavNonAuth>
+        <Navigation v-if="currentUser"></Navigation>
+    </header>
+
+    <transition name="fade" mode="out-in">
+      <router-view class="view"></router-view>
+    </transition>
+
+    
+    <footer class="footer">
+        <span class="text-muted">@2020 nobo solution .llc</span>
+    </footer>
+
   </div>
+  
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+  import { mapState } from 'vuex'
+  import NavNonAuth   from './components/NavNonAuth.vue'
+  import Navigation   from './components/Navigation.vue'
+
 
 export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
+    data() {
+      return {
+
+      }
+    },
+    components: { NavNonAuth, Navigation },
+    computed: {
+      ...mapState(['currentUser'])
+    }
+
 }
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+<style lang="scss" scoped>
+   @import './assets/scss/app.scss';
+
+   .fade-enter-active, .fade-leave-active {
+     transition: all .2s ease
+   }
+   .fade-enter, .fade-leave-active {
+     opacity: 0;
+   }
 </style>

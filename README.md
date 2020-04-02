@@ -1,24 +1,7 @@
-# client
+# nobo vue app
 
-## Project setup
-```
-npm install
-```
+## Building nobo vue app for the learning and the personal growth
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+### It will be uploaded nobo.mn
 
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+See [nobo.mn](https://nobo.mn).
