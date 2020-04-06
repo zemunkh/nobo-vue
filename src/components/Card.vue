@@ -5,7 +5,7 @@
             </div>
             <div class="details">
                 <!-- <a @click="sendId(id)"><h3>{{ name }}</h3></a> -->
-                <router-link :to="'/book/' + id"><h3>{{ name }}</h3></router-link>
+                <router-link :to="'/home/' + id"><h3>{{ name }}</h3></router-link>
                 <p class="author">{{ author }}</p>
                 <country-flag :country="language"></country-flag>
                 <p>ISBN: {{ isbn }}</p>

@@ -1,16 +1,16 @@
-@import './custom.scss';
-
-
-
 .nav-link {
     text-align: end;
     font-weight: bold;
-    font-size: 1.2rem;
+    font-size: 16px;
     font-family: 'Raleway';
     color: $primary;
     padding-right: 100px;
+    padding-top: 5px;
     display: inline-block;
     position: relative;
+}
+.nav-link:hover {
+  opacity: 1;
 }
 
 .nav-link::before {
@@ -19,15 +19,20 @@
     content: "";
     position: absolute;
     background-color: #f2f2f2;
-  }
+}
 
 .nav-link-grow-up::before {
     height: 0%;
-    width: 80%;
+    width: 75%;
     bottom: 0px;
-  }
+}
   
 .nav-link-grow-up:hover::before {
-    height: 5px;
+    height: 4px;
+}
+
+
+li a {
+  text-decoration: none;
 }
 

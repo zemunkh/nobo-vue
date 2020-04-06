@@ -1,10 +1,3 @@
-
-.navbar-nav {
-    display: grid;
-    grid-template-columns: 50% auto;
-}
-
-
 html, form {
     height: 100%;
 }
@@ -15,35 +8,20 @@ body {
     min-height: 100%;
     display: grid;
     grid-template-rows: 1fr auto;
-}
-
-
-header {
-    // background: none;
-    border-bottom: 0;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, .2);
-}
-
-#top-item {
-    // background-image: url('https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1920');
-    padding-bottom: 1rem;
-    @include desktop {
-        padding-bottom: 2rem;
+    header {
+        background-color: $info;
     }
 }
 
-#app {
-    background-image: url('https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1920'); 
-    background-size: cover;
-    background-repeat: no-repeat;
-    width: 100%;
-    height: 550px;
+.component { 
+    margin-top: 50px;
+    h1 {
+        margin-left: 20px;
+    }
 }
 
-.component {
-    margin-top: 100px;
-}
 
+// This is login form css file. Soon it will be
 main {
     font-family: $font-family-base;
     @include desktop {
@@ -92,52 +70,8 @@ main {
 }
 
 
-.nonauth-bar {
-    background-color: rgba($color: #000000, $alpha: 0.0);
-}
 
 
-// For test
 
-.book-grid {
-    margin: 20px;
-    margin-top: 20px;
-    display: grid;
-    gap: 1rem;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    grid-auto-rows: 240px;
-}
-
-.title-component {
-    font-family: Helvetica;
-    margin-top: 20px;
-    margin-left: 15px;
-}
-
-
-.card {
-    display: flex;
-    flex-flow: column;
-    // flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: #fff;
-    box-shadow: rgba(3, 8, 20, 0.1) 0px 0.15rem 0.5rem, rgba(2, 8, 20, 0.1) 0px 0.075rem 0.175rem;
-    height: 100%;
-    width: 100%;
-    border-radius: 4px;
-    transition: all 500ms;
-    overflow: hidden;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    
-
- }
-  
-.card:hover {
-    box-shadow: rgba(2, 8, 20, 0.1) 0px 0.35em 1.175em, rgba(2, 8, 20, 0.08) 0px 0.175em 0.5em;
-    transform: translateY(-3px) scale(1.1);
- }
 
 

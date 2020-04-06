@@ -1,21 +1,20 @@
 <template>
   <section>
-    <Landing></Landing>
+    <Search></Search>
     <Explore></Explore>
   </section>
 </template>
 
 
 <script>
-  import Landing from '../components/Landing.vue'
   import Explore from '../components/Explore.vue'
-
+  import Search from '../components/Search.vue'
   export default {
     data() {
       return {
 
       }
     },
-    components: { Landing, Explore }
+    components: { Explore, Search }
   }
 </script>
