@@ -42,17 +42,21 @@ const routes = [
     }
   },
   {
+    path: "*",
+    redirect: '/404'
+  },
+  {
     path: '/404',
     alias: '*',
     name: 'NotFound',
-    ccomponent: () => import(/* webpackChunkName: "notfound" */ '../views/NotFound.vue')
+    component: () => import(/* webpackChunkName: "notfound" */ '../views/NotFound.vue')
   },
 
 ]
 
 const router = new VueRouter({
-  routes,
-  mode: "history"
+  mode: "history",
+  routes
 });
 
 router.beforeEach((to, from, next) => {

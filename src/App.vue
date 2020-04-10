@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <header id="bg">
+    <header id="nav">
         <NavNonAuth v-if="!currentUser"></NavNonAuth>
         <Navigation v-if="currentUser"></Navigation>
     </header>

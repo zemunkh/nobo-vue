@@ -15,6 +15,6 @@
 
       }
     },
-    components: { Explore, Search }
+    components: { Explore, Search } 
   }
 </script>

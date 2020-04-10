@@ -1,4 +1,4 @@
-.container {
+.form-container {
     padding-top: 30px;
     @include desktop {
         display: grid;
@@ -10,11 +10,10 @@
         background: #fff;
         padding: 20px;
         margin: auto 2em;
-        border-radius: $borders;
+        // border-radius: $borders;
         box-shadow: 0 10px 30px rgba(0, 0, 0, .2);
         width: 80%;
         
-    
         @include desktop { 
             grid-area: "search";
             height: fit-content;
@@ -31,7 +30,7 @@
 
         @include desktop {
             grid-area: "primary";
-            text-align: right;
+            text-align: left;
             margin: 0 0 0 4em;
         }
 
@@ -51,14 +50,14 @@
         }
 
         a {
-            color: color(primary-dark);
+            color: $primary;
             border-radius: $borders;
             text-decoration: none;
             text-transform: uppercase;
             font-weight: bold;
             background-color: $accent;
             display: block;
-            margin: 50px auto 0 auto;
+            margin: 25px auto 0 auto;
             padding: $padding;
             z-index: 0;
 

@@ -65,3 +65,9 @@ export default {
     }
 }
 </script>
+
+<style lang="scss" scoped>
+    h1 {
+       margin: 20px; 
+    }
+</style>

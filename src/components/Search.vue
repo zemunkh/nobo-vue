@@ -1,16 +1,20 @@
 <template>
-    <div class="container">
+    <div class="form-container">
         <section id="search">
             <h3>Search your book</h3>
             <div>
                 <b-form @submit="onSearch">
                     <b-form-group id="book" label="Book name" label-for="book-name" description="To search book">
-                        <b-form-input id="book-name" v-model="$v.form.name.$model" :state="validateState('name')" aria-describedby="name-feedback" placeholder="Book name, author"></b-form-input>
-                        <b-form-invalid-feedback id="name-feedback">
-                            This is a required field, Zee
-                        </b-form-invalid-feedback>
+                        <b-form-input id="book-name" v-model="form.name" placeholder="Book name, author"></b-form-input>
                     </b-form-group>
-                    <b-button type="submit" variant="primary" :disabled="$v.form.$invalid">Search</b-button>
+                    <div>
+                        <label for="example-datepicker">Choose a date</label>
+                        <b-form-datepicker id="example-datepicker" v-model="value" class="mb-2"></b-form-datepicker>
+                        <p>Value: '{{ value }}'</p>
+                    </div>
+
+                    <b-button type="submit" variant="primary" :disabled="!nameIsValid">Search</b-button>
+
                 </b-form>
             </div>
         </section>
@@ -20,44 +24,34 @@
             <a href="#">Get help already</a>
         </section>
     </div>
-
 </template>
 
 
 <script>
-import { validationMixin } from "vuelidate";
-import { required, minLength } from "vuelidate/lib/validators";
+
 
 export default {
-    mixins: [validationMixin],
     data() {
         return {
             form: {
-                name: null,
-            }
+                name: '',
+            },
+            value: ''
         }
     },
-    validations: {
-        form: {
-            name: {
-                required,
-                minLength: minLength(2)
-            }
+    computed: {
+        nameIsValid () {
+            return this.form.name.length > 1 
         }
     },
     methods: {
-        validateState(name) {
-            const { $dirty, $error } = this.$v.form[name];
-            return $dirty ? !$error : null;
-        },
         onSearch() {
-            this.$v.form.$touch();
-            if (this.$v.form.$anyError) {
-                return;
-            }
-
-            alert("Form submitted");
+            console.log("Form data:", this.form.name)
         }
     }
 }
 </script>
+
+
+
+
