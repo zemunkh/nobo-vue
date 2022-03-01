@@ -4,12 +4,12 @@ import 'firebase/firestore'
 
 // firebase init
 const config = {
-    apiKey: "AIzaSyBMx9IjbEqoDaxbZSlnSwQscQ2Z5YApluI",
-    authDomain: "nobodemo-da07a.firebaseapp.com",
-    databaseURL: "https://nobodemo-da07a.firebaseio.com",
-    projectId: "nobodemo-da07a",
-    storageBucket: "nobodemo-da07a.appspot.com",
-    messagingSenderId: "54142263707"
+    apiKey: "",
+    authDomain: "",
+    databaseURL: "",
+    projectId: "",
+    storageBucket: "",
+    messagingSenderId: ""
   };
 firebase.initializeApp(config)
 
